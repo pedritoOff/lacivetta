@@ -178,8 +178,24 @@ function renderLead(story) {
 }
 
 function isSportsCategory(category) {
-  const sportsKeywords = ['sport ', 'calcio', 'basket', 'tennis', 'formula', 'motori', 'mondiali', 'olimpiadi', 'atletica', 'ciclismo', 'nuoto', 'pallavolo'];
-  return sportsKeywords.some(keyword => category.toLowerCase().includes(keyword));
+  if (typeof category !== 'string') return false;
+
+  const sportsKeywords = [
+    'calcio', 'basket', 'tennis', 'formula',
+    'motori', 'mondiali', 'olimpiadi',
+    'atletica', 'ciclismo', 'nuoto', 'pallavolo'
+  ];
+
+  const normalizedCategory = category.toLowerCase();
+
+  // Riconosce "sport" come parola intera
+  if (/\bsport\b/i.test(normalizedCategory)) {
+    return true;
+  }
+
+  return sportsKeywords.some(keyword =>
+    normalizedCategory.includes(keyword)
+  );
 }
 
 function renderStories(stories) {
