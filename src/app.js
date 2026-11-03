@@ -547,8 +547,15 @@ function looksLikeImageUrl(value) {
 }
 
 function readFirstCategory(item) {
-  const categories = item.getElementsByTagName("category");
-  return categories[0]?.textContent?.trim() ?? "";
+  const categories = [...item.getElementsByTagName("category")];
+
+  const sportCategory = categories.find(category =>
+    isSportsCategory(category.textContent?.trim() ?? "")
+  );
+
+  return sportCategory?.textContent?.trim()
+    ?? categories[0]?.textContent?.trim()
+    ?? "";
 }
 
 function inferCategoryFromLink(link) {
