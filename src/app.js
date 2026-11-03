@@ -178,7 +178,7 @@ function renderLead(story) {
 }
 
 function isSportsCategory(category) {
-  const sportsKeywords = ['sport', 'calcio', 'basket', 'tennis', 'formula', 'motori', 'mondiali', 'olimpiadi', 'atletica', 'ciclismo', 'nuoto', 'pallavolo'];
+  const sportsKeywords = ['sport ', 'calcio', 'basket', 'tennis', 'formula', 'motori', 'mondiali', 'olimpiadi', 'atletica', 'ciclismo', 'nuoto', 'pallavolo'];
   return sportsKeywords.some(keyword => category.toLowerCase().includes(keyword));
 }
 
