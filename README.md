@@ -1,4 +1,4 @@
-# Il Gazzettino
+# La Civetta
 
 Una piccola web app statica che legge il feed RSS del **Corriere** e lo presenta con un layout da quotidiano cartaceo.
 
