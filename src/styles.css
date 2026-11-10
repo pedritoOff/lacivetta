@@ -17,7 +17,7 @@ body {
   min-height: 100vh;
   font-family: "Instrument Sans", sans-serif;
   color: var(--ink);
-  background: radial-gradient(circle at 50% 50%, var(--paper), var(--paper-dark));
+  background: var(--paper-dark);
   padding-top: env(safe-area-inset-top);
 }
 
@@ -43,7 +43,7 @@ button {
   width: min(1400px, calc(100% - 32px));
   margin: 24px auto;
   padding: 24px;
-  background: var(--paper);
+  background: var(--paper-dark);
   border: 1px solid rgba(93, 68, 53, 0.22);
   box-shadow: 0 20px 50px var(--shadow);
 }
